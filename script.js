@@ -13,3 +13,7 @@ document.getElementById("designText").style.fontFamily =
 font;
 
 }
+function clearDesign(){
+document.getElementById("designText").innerHTML = "Your Verse Here";
+document.getElementById("verse").value = "";
+}

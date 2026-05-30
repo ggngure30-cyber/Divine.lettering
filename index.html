@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divine Lettering Studio</title>
+<title>Divine Lettering Studio Pro</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,49 +11,62 @@
 
 <header>
 <h1>Divine Lettering Studio</h1>
-<p>Create Christian Verse Designs</p>
+<p>Pro Christian Design Studio</p>
 </header>
 
 <div class="container">
 
-<textarea id="verse" placeholder="Enter Bible verse or quote"></textarea>
+<textarea id="verse" placeholder="Enter verse or keyword (hope, faith, love...)"></textarea>
 
 <select id="font">
-<option>Arial</option>
 <option>Georgia</option>
+<option>Arial</option>
 <option>Verdana</option>
 <option>Times New Roman</option>
+<option>Courier New</option>
+<option>Trebuchet MS</option>
+<option>Impact</option>
 </select>
 
-<button onclick="generateDesign()">
-Generate Design
-</button>
-<button onclick="clearDesign()">
-Clear Design
-</button>
+<select id="effect">
+<option>Normal</option>
+<option>Glow</option>
+<option>Gold</option>
+<option>Shadow</option>
+</select>
+
+<button onclick="generateDesign()">Generate</button>
+<button onclick="generateVerse()">AI Verse Suggest</button>
+<button onclick="clearDesign()">Clear</button>
+<button onclick="downloadImage()">Download</button>
+
+<h3>Templates</h3>
+<div class="templates">
+<button onclick="template('revival')">🔥 Revival</button>
+<button onclick="template('worship')">🙏 Worship</button>
+<button onclick="template('hope')">🌿 Hope</button>
+<button onclick="template('youth')">⚡ Youth</button>
+</div>
+
+<h3>Backgrounds</h3>
+<div class="bg-buttons">
+<button onclick="setBackground('nature')">Nature</button>
+<button onclick="setBackground('mountain')">Mountain</button>
+<button onclick="setBackground('sunset')">Sunset</button>
+<button onclick="setBackground('divine')">Divine</button>
+</div>
+
 <div id="designArea">
 
-  <div id="designText">
-    Your Verse Here
-  </div>
+<div id="designText">Your Verse Appears Here</div>
 
-  <div id="signature">
-    DIVINE LETTERING
-  </div>
-
-</div>
-<div id="designText">
-Your Verse Here
-</div>
-
-<div id="signature">
-DIVINE LETTERING
-</div>
+<div id="signature">DIVINE LETTERING</div>
 
 </div>
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="script.js"></script>
 
 </body>
